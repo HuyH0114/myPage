@@ -1,0 +1,197 @@
+
+/*
+File:  ~hhuynh/index.html
+  Huy Huynh, UMass Lowell Computer Science, Huy_Huynh1@student.uml.edu
+  Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
+    copied or excerpted for educational purposes with credit to the author.
+  updated by Huy Huynh on September 7, 2015 at 3:33 PM
+  updated by Huy Huynh on September 17, 2015 at 7:34 PM
+  updated by Huy Huynh on September 19, 2015 at 11:52 PM
+  updated by Huy Huynh on September 22, 2015 at 9:31 PM
+  Create your own web site that will be used as an index for future work. 
+  Incorporate ideas, tags, and other materials taught in class into the web site.
+
+  Also, while extending my stylesheet for assignment 3, I also learned a lot of new CSS commands.
+  For instance I learned the background function that allowed me to change the opacity of the 
+  background. I also learned to add a border to my texts and made the texts inside a box, and
+  display:table to move certain texts properly. In Addition, I learned out how to display bullet
+  points inside of the border or block that I created with the line-style-position command.
+  All of these were learned from W3schools.com and their CSS tutorials. I also used stack overflow
+  which I provided a link below to the specific post/thread I looked at. 
+  
+*/
+
+/*setting the overall look to each page, here I used set an image as the page's background.' 
+  did a ../background to allow it to use the background image from the directory above it.*/
+body{
+    padding: 0;
+    margin: 10px;
+    overflow-y: scroll;
+    font-family: cursive;
+    font-size: 18px;
+    background-image: url("../background1.jpg");
+    
+}
+/*Overall format and how each header 1 should look like*/
+h1{
+    color: white;
+    padding:10px;
+    margin: 0;
+    text-align: center;
+    font-size: 60px;
+    
+}
+.title {
+    font-size: 50px;
+}
+/*Overall format and how each header 2 should look like*/
+h2 {
+    color: white;
+    text-align: center;    
+    background: rgba(0, 0, 0, .5);  
+
+}
+/*Overall format and how each paragraph should look like*/
+p {
+    color: white;
+    margin: auto;
+    /*word-wrap: break-word;*/
+     
+   
+}
+/*This was to center and add a border for certain texts*/
+.center {
+    margin: auto;
+    width: 60%;
+    border:3px solid #FFFFFF;
+    padding: 10px;
+    background: rgba(0, 0, 0, .5);
+}
+/*This class was to move my validator logo to the center of my page and place it below everything.*/
+.bottom {
+    margin: auto;
+    padding: 10px;
+    display:table;
+    bottom: auto;
+    
+}
+
+/*Specific class for lists to further format the ul tag.
+  Here I made the text white, had a display table to actually move the 
+  whole bulleted list over to the center of the page. 
+  Added a background and border and adjusted its dimensions to match the border above.
+  I had a hard time getting the bullets to fit inside the border without disrupting the dimension
+  of the border but this stack overflow post showed me about list-style-position.
+  http://stackoverflow.com/questions/19006653/bullets-in-unordered-list-not-contained-within-the-block */
+.assign1 {
+    color: white;
+    display:table;
+    background: rgba(0, 0, 0, .5);
+    margin: auto;
+    width: 60%;
+    border:3px solid #FFFFFF;
+    list-style-position: inside;
+    padding: 10px;
+}
+
+/*class specifically used for the About page, and to further format the paragraph tag.*/
+.aboutpara {
+    width:700px;
+    float:left;
+    padding: 10px;
+    background: rgba(0, 0, 0, .5);
+    display:inline-block;
+    border:3px solid #FFFFFF;
+
+}
+/*class specifically used for the About page, and to further format the paragraph tag.*/
+.aboutpara2{
+    width:750px;
+    float:right;
+    padding: 10px;
+    background: rgba(0, 0, 0, .5);
+    border:3px solid #FFFFFF;
+    list-style-position: inside;
+}
+/*class for my images*/
+.displayed { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+}
+/*This was for the embed youtube code that I took from Youtube.*/
+iframe{
+     
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+/*Overall format for lists*/ 
+ul {
+    color:white;
+    display:inline-block;
+}
+
+
+/*
+This portion of the code was from a video I watched on youtube on creating a 
+navigation bar. At first the video did not make much sense to me. But after
+reading more at w3schools.com and searching the web on syntax and code that the
+video creater did, everything made much more sense. There were a few parts where
+I still did not understand completely like the 960px value and where the 
+uploader got that value from. The video's URL is 
+https://www.youtube.com/watch?v=PN1iMaVfzfQ
+I also conversed with Jason Downing on problems that I came across. 
+*/
+#nav{
+    background-color:black;
+    text-align: left;
+}
+#nav_wrapper{
+    width: 960px;
+    margin: 0;
+    text-align: left;
+}
+#nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    
+}
+#nav ul li{
+    display: inline-block;
+}
+#nav ul li:hover{
+    background-color: grey;
+}
+#nav ul li a,visited{
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+#nav ul li a:hover{
+    color: white;
+    text-decoration: none;
+}
+#nav ul li:hover ul{
+    display: block;
+}
+#nav ul ul{
+    display: none;
+    position: absolute;
+    background-color: darkgray;
+}
+#nav ul ul li{
+    display:block;
+}
+#nav ul ul li a,visited{
+    color: white;
+}
+#nav ul ul li a:hover{
+    color: white;;
+}
+

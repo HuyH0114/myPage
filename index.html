@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+File:  /~hhuynh/index.html
+  Huy Huynh- student at UMass Lowell in 91.461 GUI Programing I, 
+  Contact: Huy_Huynh1@student.uml.edu
+  Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
+  copied or excerpted for educational purposes with credit to the author.
+  updated by Huy Huynh on September 9, 2015 at 11:37 PM
+  updated by Huy Huynh on September 17, 2015 at 7:34 PM
+  updated by Huy Huynh on September 19, 2015 at 11:52 PM
+  updated by Huy Huynh on September 20, 2015 at 9:22 PM
+
+  Create your own web site that will be used as an index for future work. 
+  Incorporate ideas, tags, and other materials taught in class into the web site.
+  The two resources that I mainly used was from a video on youtube to make a 
+  navigation bar and also w3schools.com for basic HTML and CSS.
+-->
+<html>
+    <head>
+        <title>My profile Huy Huynh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <!-- Linking the external style sheet -->
+        <link href="css/styles.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        
+        <!-- Creating the drop down/navigation menu
+             I watched a tutorial on youtube on how to make a this.
+             The video that I used is: https://www.youtube.com/watch?v=PN1iMaVfzfQ.-->
+        <div id="nav">
+            <div id="nav_wrapper">
+                <ul>
+                    <li><a href="index.html">Home</a></li><li>
+                        <a href="About.html">About</a></li><li>
+                    <a href="#">GUI 1 Assignments</a>
+                        <ul>
+                            <li><a href="assignment1.html">Assignment 1</a></li>
+                            <li><a href="assignment2.html">Assignment 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            
+      
+        <h1>Welcome to my page!</h1>
+        <hr>
+        <!--Here I made the word About have a link where it will link to my about page. I learned
+            this technique and how to use it from the W3schools.com site.-->
+        <p class="center" title="Huy Huynh"> 
+            Welcome to my page, to learn more about me head over to the <a href="About.html" target="_top">About</a> page.
+            To take a look at completed GUI assignments hover over to the GUI 1 Assignments tab to view all of the available assignments.
+        </p>
+        
+        <!--This chuck of code was taken from the W3C CSS Validation Service site.
+            I also made a class for it to position it accordingly to my page. I explained 
+            what I did to position it more in my .css file. Also the html validator button was
+			assisted by Jason Downing, he helped me write the href and find the html logo.-->
+        <p class="bottom">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+            </a> 
+	    <a href="http://validator.w3.org/check?uri=referer">
+                <img alt="Valid HTML4.01" src="http://www.w3.org/Icons/valid-html401-blue.png" /></a>
+        </p>
+    </body>
+</html>
