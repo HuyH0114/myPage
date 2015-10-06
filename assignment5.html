@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+File:  /~hhuynh/About.html
+  Huy Huynh- student at UMass Lowell in 91.461 GUI Programing I, 
+  Contact: Huy_Huynh1@student.uml.edu
+  Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
+  copied or excerpted for educational purposes with credit to the author.
+  Created by Huy Huynh on October 5, 2015 at 6:00 pm.
+  Updated by Huy Huynh on October 5, 2015 at 10:57 pm.
+-->
+<html>
+    <head>
+        <title>My profile Huy Huynh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!--These href links are links to the various Google Fonts I used at 
+            https://www.google.com/fonts# -->
+        <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+        
+        
+         <!-- Linking the external style sheet -->
+        <link href="css/styles.css" type="text/css" rel="stylesheet" />
+        
+    </head>
+    <body>
+        
+        <!-- Creating the drop down/navigation menu
+             I watched a tutorial on youtube on how to make a this.
+             The video that I used is: https://www.youtube.com/watch?v=PN1iMaVfzfQ.-->
+        <div id="nav">
+            <div id="nav_wrapper">
+                <ul>
+                    <li><a href="index.html">Home</a></li><li>
+                        <a href="About.html">About</a></li><li>
+                    <a href="#">GUI 1 Assignments</a>
+                        <ul>
+                            <li><a href="assignment1.html">Assignment 1</a></li>
+                            <li><a href="assignment2.html">Assignment 2</a></li>
+                            <li><a href="assignment5.html">Assignment 5</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+            
+       <!-- I made it so my header will link to the assignment pages -->
+        <h1><a href="https://teaching.cs.uml.edu/~heines/91.461/91.461-2015-16f/461-assn/FormattingText-v05.jsp" target="_top">Assignment 5</a></h1>
+        
+        <hr>
+        <!--Youtube video taken from Youtube's EMBED option, then altered video
+            size ratio to fit borders I made.-->
+        <div class="videocenter">
+            <iframe width="100%" height="300" src="https://www.youtube.com/embed/yyl24HRGgSU" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <!-- Made a div called content -->
+        <div id="content"></div>
+        
+        <!-- The following portion below involving the Javascript and Loading in JSON 
+        was taken and referenced from Prof.Heine's Sample code provided in class and Piazza.
+        URL: https://piazza.com/class/icm9jynacvn5kx?cid=22 --> 
+        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript">
+            jQuery(document).ready( function() {
+                jQuery.get( "a5.json", function (data) {
+                    placeContent( data );
+                }, "json");  
+            });
+        </script>
+        <!-- The following portion below involving the Javascript and Loading in
+        JSON was taken and referenced from Prof.Heine's Sample code provided in 
+        class and Piazza. URL: https://piazza.com/class/icm9jynacvn5kx?cid=22 -->  
+        <script type="text/javascript">
+            function placeContent ( story ) {
+                var strContent = "";
+                
+                strContent += "<h2 class='songtitle'>" + story.songtitle + "</h2>" ;
+                strContent += "<h3 class='artist'>" + story.artist + "</h3>" ;
+                
+            // loop through all the paragraphs and sentences
+            for ( var para = 0 ; para < story.text.lyrics.length ; para++ ) {
+              strContent += "<p>" ;
+              // These if statements are to check each index of the para array.
+              // By doing so I was able to provide each specific index a tag/class
+              // that I wanted, so I can edit each "verse" in this case to my song.
+              // I figured out the corresponding indexes by using the JSON editor
+              // provided online. URL:http://www.jsoneditoronline.org/
+              if(para === 0) {
+                  strContent += "<div class='verse1'>";
+              }
+               if(para === 1) {
+                  strContent += "<div class='verse2'>";
+              }
+              if(para === 2) {
+                  strContent += "<div class='verse3'>";
+              }
+              if(para === 3) {
+                  strContent += "<div class='verse4'>";
+              }
+              if(para === 4) {
+                  strContent += "<div class='verse5'>";
+              }
+              if(para === 5) {
+                  strContent += "<div class='verse6'>";
+              }
+              if(para === 6) {
+                  strContent += "<div class='verse7'>";
+              }
+              if(para === 7) {
+                  strContent += "<div class='verse8'>";
+              }
+              if(para === 8) {
+                  strContent += "<div class='verse9'>";
+              }
+              if(para === 9) {
+                  strContent += "<div class='verse10'>";
+              }           
+              for ( var sent = 0 ; sent < story.text.lyrics[para].length ; sent++ ) {
+                // inserted a p tag here to split each line to get the format I wanted  
+                strContent += "<p>" ; 
+                strContent += story.text.lyrics[para][sent] + "  " ;
+                strContent += "</p>" ;
+              }
+              
+              strContent += "</div>" ;
+              // added a break after each verse/paragraph
+              strContent += "</p><br/>" ;
+              
+            }
+             $("#content").html( strContent ) ;
+            }
+         </script>
+        
+
+        <!--This chuck of code was taken from the W3C CSS Validation Service site.
+            I also made a class for it to position it accordingly to my page. I explained 
+            what I did to position it more in my .css file. Also the html validator button was
+			assisted by Jason Downing, he helped me write the href and find the html logo.-->
+        <p class="bottom">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+            </a> 
+	    <a href="http://validator.w3.org/check?uri=referer">
+                <img alt="Valid HTML4.01" src="http://www.w3.org/Icons/valid-html401-blue.png" /></a>
+        </p>
+    </body>
+</html>

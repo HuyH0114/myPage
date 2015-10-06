@@ -76,6 +76,211 @@ p {
     
 }
 
+/*****************************************************************************
+    This portion is specifically added for Assignment 5.
+    Where I made a .songtitle, .artist, and specific verse# class for corresponding
+    to the JSON file.
+******************************************************************************/
+
+/* Made a class to add a border around my video */
+.videocenter {
+    margin-right: 33%;
+    margin-left: 33%;
+    background: rgba(0, 0, 0, .5);
+    border:3px solid #FFFFFF;
+}
+/* class that will alter the song title in JSON file */
+.songtitle {
+    color: red;
+    font-size: 250%;
+    background: rgba(0, 0, 0, .5);
+    margin-right: 33%;
+    margin-left: 33%;
+    border:3px solid #FFFFFF;
+    font-family: Fredoka One 
+}
+/* class that will alter the artist portion in JSON file */
+.artist {
+    color: orange;
+    font-size: 250%;
+    text-align: center;
+    font-family: Indie Flower;
+    background: rgba(0, 0, 0, .5);
+    margin-right: 33%;
+    margin-left: 33%;
+    border:3px solid #FFFFFF;
+        
+}
+/****
+ These specific verses will alter each of the individual paragraphs/lyric's
+ arrays and the indexes. So I had a lyrics[10] array and in each index is
+ another array with x amount of elements which are the individual sentences
+ inside the [] in the JSON file.
+****/
+
+/*Deals with Lyrics[0] content*/
+.verse1 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+    font-size: 125%;
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse1 p {
+    color: yellow;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: Orbitron;
+    
+    
+}
+/*Deals with Lyrics[1] content*/
+.verse2 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse2 p {
+    color: #00FF00;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: lobster;
+    
+}
+/*Deals with Lyrics[2] content*/
+.verse3 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse3 p {
+    color: blue;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: sigmar one;
+    
+}
+/*Deals with Lyrics[3] content*/
+.verse4 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse4 p {
+    color: #CC00CC;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: pacifico;
+    
+}
+/*Deals with Lyrics[4] content*/
+.verse5 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 150%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse5 p {
+    color: #9900CC;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: amatic sc;
+    
+}
+/*Deals with Lyrics[5] content*/
+.verse6 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse6 p {
+    color: red;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: fredoka one;
+    
+}
+/*Deals with Lyrics[6] content*/
+.verse7 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse7 p {
+    color: orange;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: Indie FLower;
+    
+}
+/*Deals with Lyrics[7] content*/
+.verse8 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse8 p {
+    color: yellow;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: orbitron;
+    
+}
+/*Deals with Lyrics[8] content*/
+.verse9 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse9 p {
+    color: #00FF00;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: lobster;
+    
+}
+/*Deals with Lyrics[9] content*/
+.verse10 {
+    border:3px solid #FFFFFF;
+    margin-right: 33%;
+    margin-left: 33%;
+      font-size: 125%
+}
+/*Had to include p tag because I editted p tag above previously, problems with
+  overwriting.*/
+.verse10 p {
+    color: blue;
+    text-align: center;  
+    background: rgba(0, 0, 0, .5);
+    font-family: sigmar one;
+    
+}
+ /*************************END OF ASSIGNMENT 5 RELATED STYLES******************/
+
 /*Specific class for lists to further format the ul tag.
   Here I made the text white, had a display table to actually move the 
   whole bulleted list over to the center of the page. 
