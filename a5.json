@@ -1,6 +1,7 @@
 {
     "documentation": {
     "comment" : [
+         "Huy Huynh JSON file for Assignment 5",
          "The JSON file was made using Prof. Heine's sample file as reference",
          "The overall idea was taken from his sample code and used into my own JSON file.",
          "I created an object called text and inside it I had an array that hold several arrays which contains my lyrics/text",

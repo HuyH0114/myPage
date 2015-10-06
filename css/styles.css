@@ -19,6 +19,7 @@ File:  ~hhuynh/index.html
   All of these were learned from W3schools.com and their CSS tutorials. I also used stack overflow
   which I provided a link below to the specific post/thread I looked at. 
   
+  For Assignment 5 material scroll down below I marked where it began and ended.
 */
 
 /*setting the overall look to each page, here I used set an image as the page's background.' 
@@ -280,7 +281,9 @@ p {
     
 }
  /*************************END OF ASSIGNMENT 5 RELATED STYLES******************/
-
+/******************************************************************************/
+ 
+ 
 /*Specific class for lists to further format the ul tag.
   Here I made the text white, had a display table to actually move the 
   whole bulleted list over to the center of the page. 
