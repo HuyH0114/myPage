@@ -1,4 +1,12 @@
 {
+    "documentation": {
+    "comment" : [
+         "The JSON file was made using Prof. Heine's sample file as reference",
+         "The overall idea was taken from his sample code and used into my own JSON file.",
+         "I created an object called text and inside it I had an array that hold several arrays which contains my lyrics/text",
+         "The site that I took the song lyrics from is http://www.metrolyrics.com/no-surprise-lyrics-daughtry.html"
+    ]
+    },
     "songtitle": "No Suprise", 
     "artist": "Daughtry",
     "text": {
