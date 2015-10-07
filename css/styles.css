@@ -33,6 +33,13 @@ body{
     background-image: url("../background1.jpg");
     
 }
+/* Changing the link colors and hover color*/
+a {
+    color: white;
+}
+a:hover {
+    color: blue;
+}
 /*Overall format and how each header 1 should look like*/
 h1{
     color: white;
