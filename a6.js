@@ -5,14 +5,18 @@
 
 function mult_calc() {
     /*Reading in the values the user inputed and storing it into variables*/
-    var first_horiz = document.getElementById('first_horizontal').value;
-    var last_horiz = document.getElementById('last_horizontal').value;
-    var first_vert = document.getElementById('first_vertical').value;
-    var last_vert = document.getElementById('last_vertical').value;
+    var first_horiz = Number(document.getElementById('first_horizontal').value);
+    var last_horiz = Number(document.getElementById('last_horizontal').value);
+    var first_vert = Number(document.getElementById('first_vertical').value);
+    var last_vert = Number(document.getElementById('last_vertical').value);
     console.log(first_horiz, last_horiz, first_vert, last_vert);
-   
+    if(last_vert < first_vert) {
+        var temp = first_vert;
+        first_vert = last_vert;
+        last_vert = temp;
+    }
    // checking if the inputs is valid
-    if(first_horiz == last_horiz || first_vert == last_vert) {
+    if(first_horiz === last_horiz || first_vert === last_vert) {
         alert("The first and end values must be different.");
         return;
     }
@@ -32,7 +36,7 @@ function mult_calc() {
     // pushing the array, here I am making a 2 Dimensional Array
     // got help from Jason Downing for this part, and he also linked me to 
     // https://stackoverflow.com/questions/966225/how-can-i-create-a-two-dimensional-array-in-javascript
-    for (var i = 0; i <= (last_horiz - first_horiz); i++) {
+    for (var i = 0; i <= Math.abs((last_horiz - first_horiz)); i++) {
         array[i] = [];
     }
     
@@ -60,10 +64,16 @@ function mult_calc() {
 }
 function create_table(created_array) {
     /*Reading in the values the user inputed and storing it into variables*/
-    var first_horiz = document.getElementById('first_horizontal').value;
-    var last_horiz = document.getElementById('last_horizontal').value;
-    var first_vert = document.getElementById('first_vertical').value;
-    var last_vert = document.getElementById('last_vertical').value;
+    var first_horiz =Number(document.getElementById('first_horizontal').value) ;
+    var last_horiz = Number(document.getElementById('last_horizontal').value);
+    var first_vert = Number(document.getElementById('first_vertical').value);
+    var last_vert = Number(document.getElementById('last_vertical').value);
+    
+     if(last_vert < first_vert) {
+        var temp = first_vert;
+        first_vert = last_vert;
+        last_vert = temp;
+    }
     
     /*Filling in a table was confusing because I was still unsure how to do so
      * in Javascript so I got help from Jason Downing. He help me understand 
@@ -74,7 +84,7 @@ function create_table(created_array) {
     // making a table tag and giviing it a class called ctable
     data = data + "<table class='ctable'>";
     // empty spot on the top left
-    data = data + "<tr ><td></td>";
+    data = data + "<tr ><td class='toprow'></td>";
     // filling in the first row
     for(var i = first_horiz; i <= last_horiz; i++) {
         data += "<td class ='toprow'>" + i + "</td>";
