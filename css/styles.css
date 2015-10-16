@@ -84,6 +84,44 @@ p {
     
 }
 
+.a6form {
+    color: white;
+    margin: auto;
+    text-align: center;
+    border:3px solid #FFFFFF;
+    padding: 10px;
+    background: rgba(0, 0, 0, .5);
+    width: 60%
+}
+
+.ctable {
+     display:table;
+     margin:auto;
+     color:white;
+     background: rgba(0, 0, 0, .5);
+     border:3px solid #9207e1;
+     width: 62%
+}
+.toprow {
+   
+    padding: 10px;
+    background: rgba(0, 0, 0, 1);
+    border:3px solid #9207e1;
+    color:#FF8000;
+}
+.leftmostcol {
+   
+    padding: 10px;
+    background: rgba(0, 0, 0, 1);
+    border:3px solid #9207e1;
+    color:#FF8000;
+}
+.tablebody {
+    background: #0F0F0F;
+    border:2px solid orangered;
+    color: #9207e1;
+}
+
 /*****************************************************************************
     This portion is specifically added for Assignment 5.
     Where I made a .songtitle, .artist, and specific verse# class for corresponding
