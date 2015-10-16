@@ -96,10 +96,11 @@ p {
 
 .ctable {
      display:table;
-     margin:auto;
+     margin-right: auto;
+     margin-left: auto;
      color:white;
      background: rgba(0, 0, 0, .5);
-     border:3px solid #9207e1;
+     
      width: 62%
 }
 .toprow {
