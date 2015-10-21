@@ -83,7 +83,7 @@ p {
     bottom: auto;
     
 }
-
+/***********************ASSIGNMENT 6 STYLES**********************************/
 .a6form {
     color: white;
     margin: auto;
@@ -93,7 +93,7 @@ p {
     background: rgba(0, 0, 0, .5);
     width: 60%
 }
-
+/*syling overall look of table*/
 .ctable {
      display:table;
      margin-right: auto;
@@ -103,6 +103,7 @@ p {
      
      width: 62%
 }
+/*styling just the top row*/
 .toprow {
    
     padding: 10px;
@@ -110,6 +111,7 @@ p {
     border:3px solid #9207e1;
     color:#FF8000;
 }
+/*styling just the left column*/
 .leftmostcol {
    
     padding: 10px;
@@ -117,12 +119,13 @@ p {
     border:3px solid #9207e1;
     color:#FF8000;
 }
+/*styling the products, basically the inner box*/
 .tablebody {
     background: #0F0F0F;
     border:2px solid orangered;
     color: #9207e1;
 }
-
+/*************************END OF ASSIGNMENT 6 STYLES**************************/
 /*****************************************************************************
     This portion is specifically added for Assignment 5.
     Where I made a .songtitle, .artist, and specific verse# class for corresponding
