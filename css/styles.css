@@ -93,10 +93,6 @@ p {
     background: rgba(0, 0, 0, .5);
     width: 60%
 }
-.alignform {
-	margin: auto;
-    color:white;
-}
 /*syling overall look of table*/
 .ctable {
      display:table;
@@ -136,7 +132,11 @@ p {
     to the JSON file.
 ******************************************************************************/
 
-
+.alignform {
+	margin-left:auto;
+	margin-right:auto;
+	color:white;
+}
 /* Made a class to add a border around my video */
 .videocenter {
     margin-right: 33%;
