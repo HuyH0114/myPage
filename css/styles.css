@@ -93,6 +93,10 @@ p {
     background: rgba(0, 0, 0, .5);
     width: 60%
 }
+.alignform {
+	margin: auto;
+    color:white;
+}
 /*syling overall look of table*/
 .ctable {
      display:table;
@@ -131,6 +135,7 @@ p {
     Where I made a .songtitle, .artist, and specific verse# class for corresponding
     to the JSON file.
 ******************************************************************************/
+
 
 /* Made a class to add a border around my video */
 .videocenter {
