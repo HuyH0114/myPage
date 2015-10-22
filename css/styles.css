@@ -93,6 +93,7 @@ p {
     background: rgba(0, 0, 0, .5);
     width: 60%
 }
+/*aligning the texts and the input boxes along with changing text colors to match the rest of the page.*/
 .alignform {
 	margin-left:auto;
 	margin-right:auto;
