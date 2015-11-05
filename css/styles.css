@@ -4,10 +4,13 @@ File:  ~hhuynh/index.html
   Huy Huynh, UMass Lowell Computer Science, Huy_Huynh1@student.uml.edu
   Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
     copied or excerpted for educational purposes with credit to the author.
-  updated by Huy Huynh on September 7, 2015 at 3:33 PM
-  updated by Huy Huynh on September 17, 2015 at 7:34 PM
-  updated by Huy Huynh on September 19, 2015 at 11:52 PM
-  updated by Huy Huynh on September 22, 2015 at 9:31 PM
+    updated by Huy Huynh on September 7, 2015 at 3:33 PM
+    updated by Huy Huynh on September 17, 2015 at 7:34 PM
+    updated by Huy Huynh on September 19, 2015 at 11:52 PM
+    updated by Huy Huynh on September 22, 2015 at 9:31 PM
+    updated by Huy Huynh on October 5, 2015 at 10:57 PM
+    updated by Huy Huynh on October 15, 2015 at 10:26 PM
+    updated by Huy Huynh on November 4, 2015 at 10:32 PM
   Create your own web site that will be used as an index for future work. 
   Incorporate ideas, tags, and other materials taught in class into the web site.
 
@@ -350,6 +353,12 @@ p {
 /*overriding the default .error class that the validator makes*/
 input.error {
     border:  3px solid red;
+}
+.formtitle {
+    margin-left:auto;
+    margin-right:auto;
+    color:#9207e1;
+    font-size: 150%;
 }
  
 /*Specific class for lists to further format the ul tag.

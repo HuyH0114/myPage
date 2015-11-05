@@ -1,6 +1,6 @@
 /* 
     Name: Huy Huynh
-
+    updated by Huy Huynh on November 4, 2015 at 10:32 PM
  */
 
 function mult_calc() {

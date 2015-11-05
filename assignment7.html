@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <!--
 File:  /~hhuynh/index.html
-  Huy Huynh- student at UMass Lowell in 91.461 GUI Programing I, 
-  Contact: Huy_Huynh1@student.uml.edu
-  Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
-  copied or excerpted for educational purposes with credit to the author.
-  Created by Huy Huynh on October 15, 2015 at 10:26 PM
+    Huy Huynh- student at UMass Lowell in 91.461 GUI Programing I, 
+    Contact: Huy_Huynh1@student.uml.edu
+    Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
+    copied or excerpted for educational purposes with credit to the author.
+    Created by Huy Huynh on October 15, 2015 at 10:26 PM
+    updated by Huy Huynh on November 4, 2015 at 10:32 PM
 
-  Create your own web site that will be used as an index for future work. 
-  Incorporate ideas, tags, and other materials taught in class into the web site.
-  The two resources that I mainly used was from a video on youtube to make a 
-  navigation bar and also w3schools.com for basic HTML and CSS.
+    Implement jQuery's validator and make multiplication table from assignment 6 
+    handle errors smoothly, and accordingly.
 -->
 <html>
     <head>
@@ -54,23 +53,29 @@ File:  /~hhuynh/index.html
                 http://www.w3schools.com/js/tryit.asp?filename=tryjs_form_elements
                 This was adding an onlick button for debugging and checking purposes.
                 I got assistance for the onsubmit portion from Jason Downing, as I was not too
-                sure how the submit really worked with Javascript/HTML.-->
+                sure how the submit really worked with Javascript/HTML.
+            
+                In addition to what I did in assignment 6, I got rid of the onsubmit, 
+                and used the method="GET" and action="" -->
             <form id="frm1" name="frm1" method="GET" action="">
-                
+                <p class="formtitle">Multiplication Table 2.0 w/ JQuery Validator</p>
                 <p class="alignform">First horizontal value:</p>
                 <div class="a7error">
                 <input type="number" name="first_horizontal" id="first_horizontal">
                 </div>
-                <div class="a7error">
+               
                 <p class="alignform">Last horizontal value:</p>
+                <div class="a7error">
                 <input type="number" name="last_horizontal" id="last_horizontal">
                 </div>
+                
+                <p class="alignform"> First Vertical value:</p>
                 <div class="a7error">
-                <p class="alignform"> First Vertical value:</p>  
                 <input type="number" name="first_vertical" id="first_vertical">
                 </div>
-                <div class="a7error">
+                
                 <p class="alignform"> Last Vertical value:</p> 
+                <div class="a7error">
                 <input type="number" name="last_vertical" id="last_vertical">
                 </div>
                 <input type="submit" value="Submit">
@@ -78,6 +83,7 @@ File:  /~hhuynh/index.html
             </form>
             
             <button onclick="mult_calc()" >Try it</button>
+            <!-- added a warning div for my warning message -->
             <div id="warning"></div>
 <!--        This commented section was for displaying the user's input from the form
             onto the page, This was just checking if the values were successfully stored.
