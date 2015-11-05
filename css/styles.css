@@ -344,6 +344,7 @@ p {
 .a7error {
     color: red;
     font-style: italic;
+    
 }
 /*class for my warning message when swapping inputs*/
 .a7warning {

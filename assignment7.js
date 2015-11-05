@@ -11,20 +11,29 @@ function mult_calc() {
     var last_vert = Number(document.getElementById('last_vertical').value);
     console.log(first_horiz, last_horiz, first_vert, last_vert);
     
+    // Fellow classmate Jason Downing assisted me with adding a little warning message
+    // This was not really an error, more of a warning to let the user know what the program
+    // is doing when the user entered in the numbers in reverse. For example the first
+    // horizontal value was 2 and last horizontal value was 1. The program will actually
+    // swap it and calculate it as 1 and 2 instead and this was to just inform the user what it is happening.
     
+    // Initially I was confused with the jquery.append and empty() and what it was really doing, 
+    // Jason Downing helped clear things up. 
      $("#warning").empty();
      if(last_horiz < first_horiz) { 
-        $("#warning").append("<p class='a7warning' > *Swapped first vertical and last horizontal inputs. </p>");
+        $("#warning").append("<p class='a7warning' > Swapped first horizontal and last horizontal inputs. </p>");
         var temp = first_horiz;
         first_horiz = last_horiz;
         last_horiz = temp;
     }
       if(last_vert < first_vert) {
-        $("#warning").append("<p class='a7warning' > *Swapped first vertical and last vertical inputs. </p>");
+        $("#warning").append("<p class='a7warning' > Swapped first vertical and last vertical inputs. </p>");
         var temp = first_vert;
         first_vert = last_vert;
         last_vert = temp;
     }
+    
+    // Took this part out after thinking about it this case really did not even make sense
    // checking if the inputs is valid
 //    if(first_horiz === last_horiz || first_vert === last_vert) {
 //        alert("The first and end values must be different.");
@@ -134,6 +143,18 @@ function create_table(created_array) {
         $("#mult_table").html(data);
        return false;
 }
+
+// I used the sample code provided in the class notes, and also seeked some help
+// from my fellow classmate Jason Downing. Initally I was still confused where
+// I should start or do to implement the validator and error cases for my table.
+// Jason Downing helped me get a better understanding and helped me get started. 
+// I also used this https://teaching.cs.uml.edu/~heines/91.461/91.461-2012-13f/461-lecs/code/jmh-table-v9.html?language=English&xBegin=-3&xEnd=1&yBegin=1&yEnd=10
+// to go about this assignment and get a better understanding of how the whole
+// plugin and jQuery works. In addition I also used the runnable code link that was in the class
+// notes. URL: https://teaching.cs.uml.edu/~heines/91.461/91.461-2015-16f/461-lecs/code/ChrisBurbineValidationTest.html
+// In addition I also used this http://jqueryvalidation.org/validate/ site to learn more about 
+// the plugin's key words, and how to use different functions of the plugin. In addition this site
+// as well http://jqueryvalidation.org/documentation/
 function validate() {
           $('#frm1').validate({
             rules : {
@@ -158,32 +179,36 @@ function validate() {
                     range: [-15, +15 ]
                 }
             },
+            
+            // I noticed in Prof. Heine's code he added the <br> tag to add a new line to his error messages.
+            // I used his sample code as reference to base my own message.
             messages : {
                 first_horizontal : {
-                    required: "<br>" +"ERROR: A number from -15 to 15 is needed for horizontal values. ",
-                    number: "<br>" +"ERROR: Enter a valid number between -15 to 15.",
-                    range: "<br>" +"ERROR: Your value is outside the expected range of -15 to 15."
+                    required: "<br>" +"Any number from -15 to 15 is needed for horizontal values. ",
+                    number: "<br>" +"Enter a valid number between -15 to 15.",
+                    range: "<br>" +"Your value is outside the expected range of -15 to 15."
                     
                     },
                 last_horizontal : {
-                    required: "<br>" +"ERROR: A number from -15 to 15 is needed for horizontal values. ",
-                    number:"<br>" + "ERROR: Enter a valid number between -15 to 15.",
-                    range: "<br>" +"ERROR: Your value is outside the expected range of -15 to 15."
+                    required: "<br>" +"Any number from -15 to 15 is needed for horizontal values. ",
+                    number:"<br>" + "Enter a valid number between -15 to 15.",
+                    range: "<br>" +"Your value is outside the expected range of -15 to 15."
                     },
                 first_vertical : {
-                    required:"<br>" + "ERROR: A number from -15 to 15 is needed for vertical values. ",
-                    number: "<br>" +"ERROR: Enter a valid number between -15 to 15.",
-                    range: "<br>" +"ERROR: Your value is outside the expected range of -15 to 15."
+                    required:"<br>" + "Any number from -15 to 15 is needed for vertical values. ",
+                    number: "<br>" +"Enter a valid number between -15 to 15.",
+                    range: "<br>" +"Your value is outside the expected range of -15 to 15."
                     
                     },
                 last_vertical : {
-                    required: "<br>" +"ERROR: A number from -15 to 15 is needed for vertical values. ",
-                    number: "<br>" +"ERROR: Enter a valid number between -15 to 15.",
-                    range: "<br>" +"ERROR: Your value is outside the expected range of -15 to 15."
+                    required: "<br>" +"Any number from -15 to 15 is needed for vertical values. ",
+                    number: "<br>" +"Enter a valid number between -15 to 15.",
+                    range: "<br>" +"Your value is outside the expected range of -15 to 15."
                     }
                 
                     
-            },   
+            },
+        // This was to get my table to actually generate and display.    
         submitHandler: function() {
                     mult_calc();
                     return false;
