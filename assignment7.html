@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+File:  /~hhuynh/index.html
+  Huy Huynh- student at UMass Lowell in 91.461 GUI Programing I, 
+  Contact: Huy_Huynh1@student.uml.edu
+  Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
+  copied or excerpted for educational purposes with credit to the author.
+  Created by Huy Huynh on October 15, 2015 at 10:26 PM
+
+  Create your own web site that will be used as an index for future work. 
+  Incorporate ideas, tags, and other materials taught in class into the web site.
+  The two resources that I mainly used was from a video on youtube to make a 
+  navigation bar and also w3schools.com for basic HTML and CSS.
+-->
+<html>
+    <head>
+        <title>My profile Huy Huynh</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+         <!-- Linking the external style sheet -->
+        <link href="css/styles.css" type="text/css" rel="stylesheet" />
+       
+    </head>
+    <body>
+        
+        <!-- Creating the drop down/navigation menu
+             I watched a tutorial on youtube on how to make a this.
+             The video that I used is: https://www.youtube.com/watch?v=PN1iMaVfzfQ.-->
+        <div id="nav">
+            <div id="nav_wrapper">
+                <ul>
+                    <li><a href="index.html">Home</a></li><li>
+                        <a href="About.html">About</a></li><li>
+                    <a href="#">GUI 1 Assignments</a>
+                        <ul>
+                            <li><a href="assignment1.html">Assignment 1</a></li>
+                            <li><a href="assignment2.html">Assignment 2</a></li>
+                            <li><a href="assignment3.html">Assignment 3</a></li>
+                            <li><a href="assignment4.html">Assignment 4</a></li>
+                            <li><a href="assignment5.html">Assignment 5</a></li>
+                            <li><a href="assignment6.html">Assignment 6</a></li>
+                            <li><a href="assignment7.html">Assignment 7</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="a6form" >
+            
+            <!--Creating a form, I used w3school website to understand how to use forms
+                URL: http://www.w3schools.com/js/js_input_examples.asp was for finding values
+                in each element.
+                http://www.w3schools.com/js/tryit.asp?filename=tryjs_form_elements
+                This was adding an onlick button for debugging and checking purposes.
+                I got assistance for the onsubmit portion from Jason Downing, as I was not too
+                sure how the submit really worked with Javascript/HTML.-->
+            <form id="frm1" name="frm1" method="GET" action="">
+                
+                <p class="alignform">First horizontal value:</p>
+                <div class="a7error">
+                <input type="number" name="first_horizontal" id="first_horizontal">
+                </div>
+                <div class="a7error">
+                <p class="alignform">Last horizontal value:</p>
+                <input type="number" name="last_horizontal" id="last_horizontal">
+                </div>
+                <div class="a7error">
+                <p class="alignform"> First Vertical value:</p>  
+                <input type="number" name="first_vertical" id="first_vertical">
+                </div>
+                <div class="a7error">
+                <p class="alignform"> Last Vertical value:</p> 
+                <input type="number" name="last_vertical" id="last_vertical">
+                </div>
+                <input type="submit" value="Submit">
+				
+            </form>
+            
+            <button onclick="mult_calc()" >Try it</button>
+            <div id="warning"></div>
+<!--        This commented section was for displaying the user's input from the form
+            onto the page, This was just checking if the values were successfully stored.
+            This was before I learned that you can just to console.log and add the variable
+            names. 
+            <p id="demo"></p>
+            <p id="demo1"></p>
+            <p id="demo2"></p>
+            <p id="demo3"></p>-->
+        </div>
+        <div id="mult_table"></div>
+        <br>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="assignment7.js"></script>
+        
+        <p class="bottom">
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px"
+                src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+                alt="Valid CSS!" />
+            </a> 
+	    <a href="http://validator.w3.org/check?uri=referer">
+                <img alt="Valid HTML4.01" src="http://www.w3.org/Icons/valid-html401-blue.png" /></a>
+        </p>
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+        <script>
+        $(document).ready(function() {
+        validate();
+        });
+        </script>
+    </body>
+</html>
+            

@@ -338,7 +338,19 @@ p {
 }
  /*************************END OF ASSIGNMENT 5 RELATED STYLES******************/
 /******************************************************************************/
- 
+.a7error {
+    color: red;
+    font-style: italic;
+}
+/*class for my warning message when swapping inputs*/
+.a7warning {
+    color: red;
+    font-style: italic;
+}
+/*overriding the default .error class that the validator makes*/
+input.error {
+    border:  3px solid red;
+}
  
 /*Specific class for lists to further format the ul tag.
   Here I made the text white, had a display table to actually move the 
