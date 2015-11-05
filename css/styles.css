@@ -86,7 +86,8 @@ p {
     bottom: auto;
     
 }
-/***********************ASSIGNMENT 6 STYLES**********************************/
+/***********************ASSIGNMENT 6 STYLES************************************/
+/******************************************************************************/
 .a6form {
     color: white;
     margin: auto;
@@ -135,10 +136,12 @@ p {
     color: #9207e1;
 }
 /*************************END OF ASSIGNMENT 6 STYLES**************************/
+
+
 /*****************************************************************************
     This portion is specifically added for Assignment 5.
-    Where I made a .songtitle, .artist, and specific verse# class for corresponding
-    to the JSON file.
+    Where I made a .songtitle, .artist, and specific verse# class for 
+    corresponding to the JSON file.
 ******************************************************************************/
 
 
@@ -341,6 +344,11 @@ p {
 }
  /*************************END OF ASSIGNMENT 5 RELATED STYLES******************/
 /******************************************************************************/
+
+
+
+/*************************BEGINNING OF ASSIGNMENT 7 RELATED STYLES*************/
+/******************************************************************************/
 .a7error {
     color: red;
     font-style: italic;
@@ -361,7 +369,13 @@ input.error {
     color:#9207e1;
     font-size: 150%;
 }
+
+/*************************END OF ASSIGNMENT 7 RELATED STYLES******************/
+/******************************************************************************/
  
+
+
+
 /*Specific class for lists to further format the ul tag.
   Here I made the text white, had a display table to actually move the 
   whole bulleted list over to the center of the page. 
