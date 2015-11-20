@@ -19,6 +19,7 @@ File:  /~hhuynh/index.html
         <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
          <!-- Linking the external style sheet -->
         <link href="css/styles.css" type="text/css" rel="stylesheet" />
+        <!-- Linking to jQuery UI style sheet -->
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.css">
     </head>
     <body>
@@ -29,9 +30,9 @@ File:  /~hhuynh/index.html
         <div id="nav">
             <div id="nav_wrapper">
                 <ul>
-                    <li><a href="index.html">Home</a></li><li>
-                        <a href="About.html">About</a></li><li>
-                    <a href="#">GUI 1 Assignments</a>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="#">GUI 1 Assignments</a>
                         <ul>
                             <li><a href="assignment1.html">Assignment 1</a></li>
                             <li><a href="assignment2.html">Assignment 2</a></li>
@@ -91,9 +92,11 @@ File:  /~hhuynh/index.html
                 <input type="number" name="last_vertical" id="last_vertical" value="0">
                 </div>
                 <div id="last_vert_slider"></div>
-                <input type="submit" value="Submit" onClick="generate_tabs();">
+                <input type="submit" value="Submit" onClick="generate_tabs()">
 		
+             
             </form>
+         
            
 <!--        <button onclick="mult_calc()" >Try it</button>-->
             <!-- added a warning div for my warning message -->
@@ -106,16 +109,15 @@ File:  /~hhuynh/index.html
             <p id="demo1"></p>
             <p id="demo2"></p>
             <p id="demo3"></p>-->
+            
+         <div id="mult_table"></div>
+        <div id="tabs">
+            <ul></ul>
         </div>
+        </div> 
        
             
-        <div id="mult_table"></div>
-        <div id="tabs">
-            <ul>
-                
-            </ul>
-        </div>
-        
+      
         <br>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="assignment8.js"></script>
@@ -131,14 +133,16 @@ File:  /~hhuynh/index.html
         </p>
         
         <!--Adding the jQuery Validator plugin -->
-        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
-        <script type='text/javascript' src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+        <script type='text/javascript' src="https://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+        <script type='text/javascript' src="https://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+       <!--Adding the jQuery UI library -->
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
         
         <script>
         $(document).ready(function() {
+        slider();    
         validate();
-        slider();
+        auto_submit();
         });
         </script>
     </body>

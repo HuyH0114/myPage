@@ -218,6 +218,8 @@ function validate() {
            
 }
 function slider() {
+    // I set my slider min's and max to -15 and 15 to match my input range in the
+    // form.
     $("#first_horiz_slider").slider({
         
         min: -15,
@@ -232,7 +234,7 @@ function slider() {
 // This onkey portion Jason Downing helped me with, it was to make it so upon
 // keyboard inputs, the validator will detect any errors, and will adjust the slider
 // according to the user input. 
-    $("#first_horizontal").on("keyup", function() {
+    $("#first_horizontal").on("keyup", function(e) {
         $("#first_horiz_slider").slider("value", this.value);
         auto_submit();
     });
@@ -298,11 +300,19 @@ function auto_submit() {
         $("form#frm1").submit();
     }
 }
+// This was to fix an issue where if I were to close a tab out of order
+var tab_count_global = 1;
 function generate_tabs() {
    
-    var counter = $('div#tabs ul li.tab').length;
-    counter++;
+    var counter = $('div#tabs ul li.tab').length + 1;
+  //  counter++;
     
+    // I used a global variable here because one problem I encountered was when
+    // I closed a tab out of order, in that if closed the very first tab, and then
+    // add a new tab, there will be two tables in each tabs. Jason Downing, figured
+    // a solution to this problem by using a global variable and he showed me how
+    // to solve this problem. 
+    tab_count_global++;
      $("#tabs").tabs();
     var first_horiz = Number(document.getElementById('first_horizontal').value);
     var last_horiz = Number(document.getElementById('last_horizontal').value);
@@ -310,23 +320,33 @@ function generate_tabs() {
     var last_vert = Number(document.getElementById('last_vertical').value);
     
     
-    
-    var tab_name = "<li class='tab'><a href '#tab-" + counter + "'>" + first_horiz
-                    + " - " + last_horiz + " by " + first_vert + " - " + last_vert
-                    + "</a> " + "<span class='ui-icon-close' role='presentation'></span>"+
+    // This was to title the tab, and name the title where horizontal values 
+    // comes first followed "by" vertical values. ex: 0-0 by 0-0 is 
+    // 0 first horiztonal value to 0 last horizontal value by 0 first vertical
+    // value to 0 last vertical value.
+    var tab_name = "<li class='tab'><a href='#tab-" + tab_count_global + "'>" + first_horiz
+                    + " to " + last_horiz + " by " + first_vert + " to " + last_vert
+                    + "</a> " + "<span class='ui-icon ui-icon-close' role='presentation'></span>"+
                     "</li>";
             
-            
+    // add on the name of tab        
     $("div#tabs ul").append(tab_name);
-    $("div#tabs").append('<div id="tab-' + counter + '">' + $("#mult_table").html() + '</div>');
+    // add the table to the tab
+    $("div#tabs").append('<div id="tab-' + tab_count_global + '">' + $("#mult_table").html() + '</div>');
+    // refresh so new tabs appear
     $("#tabs").tabs("refresh");
+    // making tab active
     $("#tabs").tabs("option", "active", -1);
     
-    // remove option from jQuery UI 
+    // remove option from jQuery UI http://jqueryui.com/tabs/#manipulation
+    // Also Jason Downing helped me explain what the jqueryui source code was
+    // actually doing. 
     $("#tabs").delegate("span.ui-icon-close", "click", function() {
         var panelID = $(this).closest("li").remove().attr("aria-controls");
         $("#" + panelID).remove();
         
+        // resets the tabs to prevent exceptions and errors from appearing from
+        // the console - Jason Downing elaborated and showed me how to do this
         try {
             $("#tabs").tabs("refresh");
         }
@@ -334,6 +354,8 @@ function generate_tabs() {
             
         }
         
+        // if there is one tab reset the page to its original state.
+        // I used this site as reference: https://api.jqueryui.com/tabs/#method-destroy
         if($('div#tabs ul li.tab').length == 0) {
             try {
                 $("#tabs").tabs("destroy");
