@@ -233,8 +233,8 @@ function slider() {
     });
 // This onkey portion Jason Downing helped me with, it was to make it so upon
 // keyboard inputs, the validator will detect any errors, and will adjust the slider
-// according to the user input. 
-    $("#first_horizontal").on("keyup", function(e) {
+// according to the user input. Same thing applies for the rest of the sliders.
+    $("#first_horizontal").on("keyup", function() {
         $("#first_horiz_slider").slider("value", this.value);
         auto_submit();
     });
@@ -249,15 +249,13 @@ function slider() {
             auto_submit();
         }
     });
-// This onkey portion Jason Downing helped me with, it was to make it so upon
-// keyboard inputs, the validator will detect any errors, and will adjust the slider
-// according to the user input.     
+
     $("#last_horizontal").on("keyup", function() {
         $("#last_horiz_slider").slider("value", this.value);
         auto_submit();   
     });
    
-
+// first vertical sliders
     $("#first_vert_slider").slider({
         min: -15,
         max: 15,
@@ -266,15 +264,14 @@ function slider() {
             auto_submit();
         }
     });
-// This onkey portion Jason Downing helped me with, it was to make it so upon
-// keyboard inputs, the validator will detect any errors, and will adjust the slider
-// according to the user input. 
+
     $("#first_vertical").on("keyup", function() {
         $("#first_vert_slider").slider("value", this.value);
         auto_submit();
     });
 //    $("#first_vertical").val($("#first_vert_slider").slider("value")); 
-    
+
+// last vertical sliders
     $("#last_vert_slider").slider({
         min: -15,
         max: 15,
@@ -283,9 +280,7 @@ function slider() {
             auto_submit();
         }
     });
-// This onkey portion Jason Downing helped me with, it was to make it so upon
-// keyboard inputs, the validator will detect any errors, and will adjust the slider
-// according to the user input.     
+   
     $("#last_vertical").on("keyup", function() {
         $("#last_vert_slider").slider("value", this.value);
         auto_submit();
