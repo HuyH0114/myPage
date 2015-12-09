@@ -1,0 +1,121 @@
+body{
+    padding: 0;
+    margin: 10px;
+    overflow-y: scroll;
+    font-family: Orbitron;
+    font-size: 18px;
+    background-image: url("../background1.jpg");
+    
+}
+/* Changing the link colors and hover color*/
+a {
+    color: white;
+}
+a:hover {
+    color: blue;
+}
+/*Overall format and how each header 1 should look like*/
+h1{
+    color: white;
+    padding:10px;
+    margin: 0;
+    text-align: center;
+    font-size: 60px;
+    
+}
+.title {
+    font-size: 50px;
+}
+/*Overall format and how each header 2 should look like*/
+h2 {
+    color: white;
+    text-align: center;    
+    background: rgba(0, 0, 0, .5);  
+
+}
+/*Overall format and how each paragraph should look like*/
+p {
+    color: white;
+    margin: auto;
+    /*word-wrap: break-word;*/
+     
+   
+}
+/*This was to center and add a border for certain texts*/
+.center {
+    margin: auto;
+    text-align:center;
+    
+    padding: 10px;
+    
+}
+/*This class was to move my validator logo to the center of my page and place it below everything.*/
+.bottom {
+    margin: auto;
+    padding: 10px;
+    display:table;
+    bottom: auto;
+    
+}
+
+
+/*
+This portion of the code was from a video I watched on youtube on creating a 
+navigation bar. At first the video did not make much sense to me. But after
+reading more at w3schools.com and searching the web on syntax and code that the
+video creater did, everything made much more sense. There were a few parts where
+I still did not understand completely like the 960px value and where the 
+uploader got that value from. The video's URL is 
+https://www.youtube.com/watch?v=PN1iMaVfzfQ
+I also conversed with Jason Downing on problems that I came across. 
+*/
+#nav{
+    background-color:black;
+    text-align: left;
+}
+#nav_wrapper{
+    width: 960px;
+    margin: 0;
+    text-align: left;
+}
+#nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    
+}
+#nav ul li{
+    display: inline-block;
+}
+#nav ul li:hover{
+    background-color: grey;
+}
+#nav ul li a,visited{
+    color: white;
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+#nav ul li a:hover{
+    color: white;
+    text-decoration: none;
+}
+#nav ul li:hover ul{
+    display: block;
+}
+#nav ul ul{
+    display: none;
+    position: absolute;
+    background-color: darkgray;
+}
+#nav ul ul li{
+    display:block;
+}
+#nav ul ul li a,visited{
+    color: white;
+}
+#nav ul ul li a:hover{
+    color: white;;
+}
+
