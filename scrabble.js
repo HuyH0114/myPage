@@ -242,8 +242,8 @@ function load_pieces() {
      // appearing on the rack. My Display was on a 15 inch 1080p laptop screen. 
      // With that in mind my pieces may appear to be different depending on the user's 
      // monitor's resolution and how big their screen is. 
-     var left_of_image = position.left + 600 + (70*i);
-     var top_of_image = position.top + 220;
+     var left_of_image = position.left + 700 + (70*i);
+     var top_of_image = position.top + 200;
      
      // add the pieces onto the screen
      $("#rack").append(scrabble_piece);
