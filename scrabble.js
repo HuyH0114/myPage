@@ -313,7 +313,7 @@ function load_droppable_pieces() {
 //             }
 
 //          This was to make the pieces snap however I really didn't notice any difference, it was
-//          shown to me from Jason however the snapple thing I used from JQuery above seem to work
+//          shown to me from Jason however the snapp thing I used from JQuery above seem to work
 //          
             $(this).append($(ui.draggable));
             ui.draggable.css("top", $(this).css("top"));
