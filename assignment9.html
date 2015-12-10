@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
+    Huy Huynh
+    Created on December 3, 2015 @ 8:00 PM
+    Modified on December 5, 2015 @ 10:00PM
+    Modified on December 7, 2015 @ 4:00PM
+    Modified on December 8, 2015 @ 11:00PM
+    Modified on December 9, 2015 @ 9:00PM
+
 -->
 <html>
     <head>
@@ -43,20 +47,59 @@ and open the template in the editor.
             </div>
         </div>
             
-        <h1>Assignment 9</h1>
+        <h1>Assignment 9 Scrabble Mini Game </h1>
         <hr>
+        <!--This div was used for my old implementation which I struggled with -->
         <div class='center'>
-        <img id="scrabble_rack" src='scrabbleimages/scrabble_row.png'>
+<!--        <img id="scrabble_row" src='scrabbleimages/scrabble_row.png'>-->
+         <div id="board"></div>
         </div>
+        <!--I made a table that will display my scrabble row
+            and made specific tiles in this case td id=drop# a special tile
+            I used double letter and double words for my implementation-->
+        <table id="scrabble_board_row">
+            <tr>
+                <td id="drop0" class="double_letter"></td>
+                <td id="drop1"></td>
+                <td id="drop2"></td>
+                <td id="drop3" class="double_word"></td>
+                <td id="drop4"></td>
+                <td id="drop5"></td>
+                <td id="drop6"></td>
+                <td id="drop7"class="double_letter"></td>
+                <td id="drop8"></td>
+                <td id="drop9"></td>
+                <td id="drop10"></td>
+                <td id="drop11"class="double_word"></td>
+                <td id="drop12"></td>
+                <td id="drop13"></td>
+                <td id="drop14"class="double_letter"></td>
+                
+                
+            </tr>
+        </table>
+        <!--I liked how Jason displayed his words and score and I asked if it was okay
+            to use something similar to what he used and got his approval. -->
+        <div class="word"> Word: <span id="created_word">____</span> </div>
+        <div class="score">Score: <span id="user_score">____</span></div>
+       
+        <!--This was to load in an image of my rack --> 
         <div class='center'>
         <img id="scrabble_rack" src='scrabbleimages/scrabble_rack.png'>
-        </div>
         <div id="rack"></div>
+        </div>
+        <!--<div id="rack"></div>-->
+        
+        <!--Adding all the necessary Javascript libraries like JQuery, JQuery UI and my Javascript file. --> 
+         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
          <!--Adding the jQuery UI library -->
         <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+         <script type='text/javascript' src="../scrabble.js"></script>
    <script>
         $(document).ready(function() {
-        
+            load_pieces();
+            load_droppable_pieces();
         });
+        </script>
     </body>
 </html>

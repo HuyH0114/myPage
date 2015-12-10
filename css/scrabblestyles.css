@@ -1,3 +1,23 @@
+/*
+File:  ~hhuynh/index.html
+  Huy Huynh, UMass Lowell Computer Science, Huy_Huynh1@student.uml.edu
+  Copyright (c) 2015 by Huy Huynh.  All rights reserved.  May be freely
+    copied or excerpted for educational purposes with credit to the author.
+    Created by Huy Huynh and all modifications are by Huy Huynh
+    Created on December 3, 2015 @ 8:00 PM
+    Modified on December 5, 2015 @ 10:00PM
+    Modified on December 7, 2015 @ 4:00PM
+    Modified on December 8, 2015 @ 11:00PM
+    Modified on December 9, 2015 @ 9:00PM
+  
+    This style sheet was based on my previous style sheet minus all of the styles 
+    from previous assignments as the other one was getting too big and long.
+    Also with such a big assignment I thought it was better to make a new sheet with
+    the essential styles from the previous style sheet. This style sheet is mainly 
+    for assignment 9 and the classes/IDs styles as well. 
+  
+  For Assignment 5 material scroll down below I marked where it began and ended.
+*/
 body{
     padding: 0;
     margin: 10px;
@@ -37,6 +57,7 @@ h2 {
 p {
     color: white;
     margin: auto;
+    text-align: center;
     /*word-wrap: break-word;*/
      
    
@@ -57,8 +78,65 @@ p {
     bottom: auto;
     
 }
-
-
+/*This is to edit my pieces class for my table.*/
+.pieces {
+    height: 50px;
+    width: 50px;
+    z-index: 9;
+}
+/*This was to edit how big I wanted the droppable transparent images to be
+  This was more useful on my old implementation that I kind of scrapped */
+.droppable{
+    height: 65px;
+    width: 65px;
+    z-index: 0;
+}
+/*This was to edit the display "Word:___" on my page */
+#created_word {
+   color: white;
+   margin: auto;
+   text-align: center;
+}
+/*This was to edit the display "Word:___" on my page */
+.word {
+    color:white;
+    margin: auto;
+    text-align: center;
+}
+/*This was to edit the display "Score:___" on my page */
+.score {
+     color:white;
+    margin: auto;
+    text-align: center;
+}
+/*This was to edit how my scrabble board looked like*/
+#scrabble_board_row {
+     border: solid 5px black;
+  margin-left: auto;
+  margin-right: auto;
+  table-layout: fixed;
+}
+/*Was editing the general layout of what each td should look like. I received help
+  from Jason Downing to make things look nicer.*/
+td {
+  background: #D2B48C;
+  border: solid 2px white;
+  height: 50px;
+  width: 50px;
+  z-index: 3
+}
+/*This was to make certain tiles look special I just loaded an image in the specific tile
+  I got the permission of Jason Downing to use the images that he used for his own scrabble 
+  board. */
+.double_letter{
+    background-image: url("../scrabbleimages/double_letter.png");
+}
+/*This was to make certain tiles look special I just loaded an image in the specific tile
+  I got the permission of Jason Downing to use the images that he used for his own scrabble 
+  board. */
+.double_word {
+    background-image: url("../scrabbleimages/double_word.png");
+}
 /*
 This portion of the code was from a video I watched on youtube on creating a 
 navigation bar. At first the video did not make much sense to me. But after
